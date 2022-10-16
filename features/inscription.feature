@@ -1,8 +1,15 @@
-Feature: Inscription
-  Tout le monde peut s inscrire en tant que joueur ou entraineur
+Feature: Toute personne peut s inscrire au club
 
-  Scenario: Creation d un compte joueur avec toutes les informations demandees a l inscription
-    Given Je suis sur la page d inscription
-    When Je remplis le formulaire d inscription avec toutes les informations demandees
-    Then Je suis redirige vers ma page joueur
-    And Je vois le message "Votre compte a bien ete cree"
+  Une personne peut s inscrire au club en remplissant le formulaire d inscription disponible sur le site du club
+
+  Scenario: Inscription d'un joueur
+    Given je suis sur la page "/inscription"
+    And je ne me suis jamais inscrit au club avec mon nom "nom"
+    When je remplis le formulaire d inscription avec les valeurs suivantes:
+      | nom   | prenom   | date_naissance   | num_tel   | email   | num_licence   | sexe   |
+      | <nom> | <prenom> | <date_naissance> | <num_tel> | <email> | <num_licence> | <sexe> |
+    Then l inscription est effective
+
+  Examples:
+    | prenom | nom    | date_naissance | num_tel    | email                | num_licence | sexe |
+    | Jean   | Dupont | 01/01/1990     | 0123456789 | jean@inscription.com | 07359004    | H    |
