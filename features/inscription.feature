@@ -11,5 +11,5 @@ Feature: Toute personne peut s inscrire au club
     Then l inscription est effective
 
   Examples:
-    | prenom | nom    | date_naissance | num_tel    | email                | num_licence | sexe |
-    | Jean   | Dupont | 01/01/1990     | 0123456789 | jean@inscription.com | 07359004    | H    |
+    | nom      | prenom    | date_naissance | num_tel    | email                | num_licence | sexe |
+    | Dupont   | Jean      | 01/01/1990     | 0123456789 | jean@inscription.com | 07359004    | H    |
