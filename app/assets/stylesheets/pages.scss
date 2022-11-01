@@ -1,21 +1,39 @@
 @import "../stylesheets/config/variables.scss";
 
 .container_inscription {
+  height: 100vh;
 
   .button_inscription {
-    margin-top: 2%;
-    width: 80%;
+    width: 100%;
     justify-content: center;
+
     button {
       background-color: $color_blue;
       color: white;
-      margin: 0 10%;
+      margin-top: 5%;
     }
   }
+}
 
-  @media screen and (min-width: 1200px) {
-    .button_inscription {
-      display: inline-flex;
+@media screen and (max-width: 441px) {
+  .button_inscription {
+    margin-top: 10%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .button_inscription {
+    margin-top: 5%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .button_inscription {
+    margin-top: 0%;
+    width: 50%;
+    justify-content: center;
+    button {
+      margin-top: 10%;
     }
   }
 }
