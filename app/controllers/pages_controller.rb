@@ -5,4 +5,7 @@ class PagesController < ApplicationController
     @saison = "2022/2023"
   end
 
+  def recherche_joueur
+  end
+
 end
