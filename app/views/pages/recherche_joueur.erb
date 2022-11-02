@@ -1,10 +1,13 @@
 <div class="container_inscription">
   <%= render(InscriptionLogoComponent.new(text: "Inscription pour la saison #{@saison}")) %>
 
+  <%= simple_form_for :recherche_joueur, url: "/inscription/recherche_joueur", method: "GET" do |form| %>
+    <%= form.input :num_licence, input_html: {value: ""}, placeholder: 'numéro de licence' %>
+    <%= form.submit 'Rechercher joueur du Baco' %>
+  <% end %>
 
-
-
-
-
+  <% if @user.present? %>
+    <%= @user.name %>
+  <% end %>
 
 </div>
