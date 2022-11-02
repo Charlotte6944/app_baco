@@ -6,8 +6,11 @@
     <%= form.submit 'Rechercher joueur du Baco' %>
   <% end %>
 
-  <% if @user.present? %>
-    <%= @user.name %>
+  <% if @users.present? %>
+    <% @users.each do |user| %>
+      <%= user.nom %>
+      <%= user.prenom %>
+    <% end %>
   <% end %>
 
 </div>
