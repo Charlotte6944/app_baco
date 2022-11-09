@@ -11,6 +11,8 @@ class PagesController < ApplicationController
     if @recherche_joueur.present?
       @num_licence = @recherche_joueur["num_licence"]
       @users = User.where(num_licence: @num_licence)
+    else
+      @users = []
     end
   end
 

@@ -17,6 +17,7 @@ body {
   .button {
     padding: 2% 3%;
     border-radius: $border_radius;
+    cursor: pointer;
   }
 
   .button-primary {
