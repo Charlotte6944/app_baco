@@ -20,11 +20,9 @@
   </div>
 
   <div class="container_user">
-    <% if @users.present? %>
-      <% @users.each do |user| %>
-        <%= user.nom %>
-        <%= user.prenom %>
-      <% end %>
+    <% if @user.present? %>
+      <%= @user.nom %>
+      <%= @user.prenom %>
     <% end %>
   </div>
 

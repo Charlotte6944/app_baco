@@ -6,13 +6,17 @@ class PagesController < ApplicationController
   end
 
   def recherche_joueur
-    @users = User.all
-    @recherche_joueur = params["num_licence"]
-    if @recherche_joueur.present?
-      @num_licence = @recherche_joueur["num_licence"]
-      @users = User.where(num_licence: @num_licence)
-    else
-      @users = []
+    if licence_params.present?
+      @num_licence = licence_params[:num_licence]
+      @user = User.where(num_licence: @num_licence)[0]
+    end
+  end
+
+  private
+
+  def licence_params
+    if params[:recherche_joueur].present?
+      params.require(:recherche_joueur).permit(:num_licence)
     end
   end
 
