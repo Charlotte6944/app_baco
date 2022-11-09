@@ -6,12 +6,52 @@
   .button_inscription {
     width: 100%;
     justify-content: center;
+    cursor: pointer;
+  }
 
-    button {
-      background-color: $color_blue;
-      color: white;
-      margin-top: 5%;
+  .container_form {
+    border-radius: $border_radius;
+    box-shadow: 0 0 10px 0 rgba(1, 80, 159, 0.3);
+    margin-left: 25%;
+    margin-right: 25%;
+
+    h2 {
+      padding-top: 2%;
     }
+
+    p {
+      padding-bottom: 2%;
+
+      a {
+        text-decoration: underline;
+      }
+    }
+
+    .btn {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      background: none;
+      font: $color_blue;
+      color: white;
+      cursor: pointer;
+    }
+
+    .input_contour {
+      border: 1px solid $color_blue;
+      border-radius: $border_radius;
+      margin: 3% 1%;
+      padding: 1%;
+      width: 40%;
+    }
+  }
+
+  .container_user {
+    padding: 1% 0;
+    border-radius: $border_radius;
+    box-shadow: 0 0 10px 0 rgba(1, 80, 159, 0.3);
+    margin-left: 25%;
+    margin-right: 25%;
   }
 }
 
@@ -29,11 +69,7 @@
 
 @media screen and (min-width: 1024px) {
   .button_inscription {
-    margin-top: 0%;
     width: 50%;
     justify-content: center;
-    button {
-      margin-top: 10%;
-    }
   }
 }

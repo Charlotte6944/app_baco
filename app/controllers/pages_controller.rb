@@ -7,7 +7,7 @@ class PagesController < ApplicationController
 
   def recherche_joueur
     @users = User.all
-    @recherche_joueur = params["recherche_joueur"]
+    @recherche_joueur = params["num_licence"]
     if @recherche_joueur.present?
       @num_licence = @recherche_joueur["num_licence"]
       @users = User.where(num_licence: @num_licence)

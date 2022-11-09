@@ -1,11 +1,7 @@
 <div class="container_inscription">
   <%= render(InscriptionLogoComponent.new(text: "Inscription pour la saison #{@saison}")) %>
   <div class="button_inscription">
-    <button>
-      <%= link_to "J'ai déjà été licencié(e) au club", "/inscription/recherche_joueur" %>
-    </button>
-    <button>
-      <%= link_to "J'ai n'ai jamais été licencié(e) au club" %>
-    </button>
+    <%= link_to "J'ai déjà été licencié(e) au club", "/inscription/recherche_joueur", class: "button button-primary"%>
+    <%= link_to "J'ai n'ai jamais été licencié(e) au club", "", class: "button button-secondary" %>
   </div>
 </div>

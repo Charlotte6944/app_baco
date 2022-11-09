@@ -1,16 +1,31 @@
 <div class="container_inscription">
   <%= render(InscriptionLogoComponent.new(text: "Inscription pour la saison #{@saison}")) %>
 
-  <%= simple_form_for :recherche_joueur, url: "/inscription/recherche_joueur", method: "GET" do |form| %>
-    <%= form.input :num_licence, input_html: {value: ""}, placeholder: 'numéro de licence' %>
-    <%= form.submit 'Rechercher joueur du Baco' %>
-  <% end %>
-
-  <% if @users.present? %>
-    <% @users.each do |user| %>
-      <%= user.nom %>
-      <%= user.prenom %>
+  <div class="container_form">
+    <%= simple_form_for :recherche_joueur, url: "/inscription/recherche_joueur", method: "GET" do |form| %>
+      <h2>Vous avez déjà été licencié au club?</h2>
+      <div class="">
+        <div class="">
+          <%= form.label "Entrer votre numéro de licence" %>
+          <%= form.input_field :num_licence, placeholder: 'numéro de licence', class: "input_contour" %>
+        </div>
+        <div class="button_inscription">
+        <%= form.submit 'Rechercher', class: 'button button-primary' %>
+        </div>
+      </div>
+      <p>Vous ne vous trouvez pas cliquez
+        <%= link_to "ici", "/inscription" %>
+      </p>
     <% end %>
-  <% end %>
+  </div>
+
+  <div class="container_user">
+    <% if @users.present? %>
+      <% @users.each do |user| %>
+        <%= user.nom %>
+        <%= user.prenom %>
+      <% end %>
+    <% end %>
+  </div>
 
 </div>
