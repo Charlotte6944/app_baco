@@ -19,7 +19,7 @@
     <% end %>
   </div>
 
-  <% if @user.present? %>
+  <% if @user %>
     <div class="container_user">
       <p>
         <%= @user.nom %>
@@ -28,6 +28,8 @@
       </p>
       <%= link_to "C'est bien moi", "/inscriptionForm", class: "button button_primary"%>
     </div>
+  <% else %>
+    <%= @message %>
   <% end %>
 
 </div>

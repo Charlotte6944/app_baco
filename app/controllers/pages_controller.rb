@@ -7,8 +7,12 @@ class PagesController < ApplicationController
 
   def recherche_joueur
     if licence_params.present?
-      @num_licence = licence_params[:num_licence]
-      @user = User.where(num_licence: @num_licence)[0]
+      if licence_params[:num_licence].length == 8
+        @num_licence = licence_params[:num_licence]
+        @user = User.where(num_licence: @num_licence)[0]
+      else
+        @message = "Aucun joueur trouvé avec ce numéro de licence"
+      end
     end
   end
 
