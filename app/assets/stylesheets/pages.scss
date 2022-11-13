@@ -26,16 +26,6 @@
       }
     }
 
-    .btn {
-      margin: 0;
-      padding: 0;
-      border: 0;
-      background: none;
-      font: $color_blue;
-      color: white;
-      cursor: pointer;
-    }
-
     .input_contour {
       border: 1px solid $color_blue;
       border-radius: $border_radius;
@@ -51,6 +41,10 @@
     box-shadow: 0 0 10px 0 rgba(1, 80, 159, 0.3);
     margin-left: 25%;
     margin-right: 25%;
+    padding: 2rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 }
 

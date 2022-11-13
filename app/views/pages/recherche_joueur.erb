@@ -10,7 +10,7 @@
           <%= form.input_field :num_licence, placeholder: 'numéro de licence', class: "input_contour" %>
         </div>
         <div class="button_inscription">
-        <%= form.submit 'Rechercher', class: 'button button-primary' %>
+          <%= form.submit 'Rechercher', class: 'button button_primary' %>
         </div>
       </div>
       <p>Vous ne vous trouvez pas cliquez
@@ -19,11 +19,15 @@
     <% end %>
   </div>
 
-  <div class="container_user">
-    <% if @user.present? %>
-      <%= @user.nom %>
-      <%= @user.prenom %>
-    <% end %>
-  </div>
+  <% if @user.present? %>
+    <div class="container_user">
+      <p>
+        <%= @user.nom %>
+        <%= @user.prenom %>
+        (<%= @user.num_licence %>)
+      </p>
+      <%= link_to "C'est bien moi", "/inscriptionForm", class: "button button_primary"%>
+    </div>
+  <% end %>
 
 </div>

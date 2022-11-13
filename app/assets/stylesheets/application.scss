@@ -20,12 +20,12 @@ body {
     cursor: pointer;
   }
 
-  .button-primary {
+  .button_primary {
     background-color: $color_blue;
     color: white;
   }
 
-  .button-secondary {
+  .button_secondary {
     background-color: white;
     color: $color_blue;
     border: 1px solid $color_blue;
