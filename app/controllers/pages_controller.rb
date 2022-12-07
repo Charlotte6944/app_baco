@@ -16,6 +16,9 @@ class PagesController < ApplicationController
     end
   end
 
+  def inscription_form
+  end
+
   private
 
   def licence_params
