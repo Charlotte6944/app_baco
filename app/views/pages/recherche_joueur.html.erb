@@ -26,7 +26,7 @@
         <%= @user.prenom %>
         (<%= @user.num_licence %>)
       </p>
-      <%= link_to "C'est bien moi", "/inscriptionForm", class: "button button_primary"%>
+      <%= link_to "C'est bien moi", "/inscription/new/formulaire", class: "button button_primary"%>
     </div>
   <% else %>
     <%= @message %>
