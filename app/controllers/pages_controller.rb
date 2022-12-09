@@ -27,4 +27,10 @@ class PagesController < ApplicationController
     end
   end
 
+  # def inscription_params
+  #   if params[:inscription_saison].present?
+  #     params.require(:inscription_saison).permit()
+  #   end
+  # end
+
 end
