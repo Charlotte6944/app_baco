@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  devise_for :utilisateurs
   devise_for :users
   resources :users, only: [:new, :create, :show]
   get '/inscription', to: 'pages#inscription'
