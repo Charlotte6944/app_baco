@@ -1,12 +1,10 @@
 Rails.application.routes.draw do
 
   devise_for :utilisateurs
-  devise_for :users
-  resources :users, only: [:new, :create, :show]
-  get '/inscription', to: 'pages#inscription'
-  get '/inscription/recherche_joueur', to: 'pages#recherche_joueur'
-  get '/inscription/new/formulaire', to: 'pages#inscription_form'
+  resources :utilisateurs, only: [:new, :create, :show]
 
-  root to: 'pages#inscription'
+  get "/Baco/admin", to: "pages#accueil", as: "pages_accueil"
+
+  root to: 'pages#accueil'
 
 end

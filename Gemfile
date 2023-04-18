@@ -1,5 +1,4 @@
 source 'https://rubygems.org'
-git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.0.3'
 
@@ -64,7 +63,6 @@ group :test do
   gem 'cucumber-rails', require: false
   # database_cleaner is not mandatory, but highly recommended
   gem 'database_cleaner'
-
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
