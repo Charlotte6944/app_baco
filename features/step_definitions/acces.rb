@@ -29,3 +29,7 @@ end
 Then('je vois un message d erreur') do
   expect(page).to have_content("Invalid Email or password.")
 end
+
+Then('je vois un message d erreur {string}') do |string|
+  expect(page).to have_content(string)
+end

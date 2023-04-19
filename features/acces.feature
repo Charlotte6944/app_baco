@@ -8,13 +8,19 @@ Feature: Accès à la plateforme
       | test@test.com    | admini   | admin   |
       | joueur@joueur.fr | joueur   | joueur  |
 
-  Scenario: Se connecté
+  Scenario: Se connecté en tant qu'administrateur
   Given Je suis sur la page de connexion
   When Je remplis le formulaire avec des données valides
   And Je clique sur le bouton "Connexion"
   Then je suis dirigé vers la page d accueil
 
-  Scenario: Je ne me connecte pas
+  Scenario: Se connecté en tant que joueur
+  Given Je suis sur la page de connexion
+  When Je remplis le formulaire avec des données valides
+  And Je clique sur le bouton "Connexion"
+  Then je vois un message d erreur 'Vous ne pouvez pas accéder à cette page.'
+
+  Scenario: Erreur de connexion
   Given Je suis sur la page de connexion
   When Je remplis le formulaire avec des données non valides
   And Je clique sur le bouton "Connexion"
