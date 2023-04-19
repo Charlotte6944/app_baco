@@ -10,25 +10,25 @@ body {
   a {
     text-decoration: none;
     color: $color_blue;
-    margin-left: 1%;
-    margin-right: 1%;
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
 
-  .button {
-    padding: 2% 3%;
+  .bouton {
+    padding: 0.5rem 1rem;
     border-radius: $border_radius;
     cursor: pointer;
   }
 
-  .button_primary {
+  .bouton_premier {
     background-color: $color_blue;
     color: white;
   }
 
-  .button_secondary {
+  .bouton_second {
     background-color: white;
     color: $color_blue;
-    border: 1px solid $color_blue;
+    border: 1rem solid $color_blue;
   }
 
   input {

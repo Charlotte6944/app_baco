@@ -1,0 +1,21 @@
+@import "../stylesheets/config/variables.scss";
+
+#header {
+  height: 3.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  img {
+    height: 3rem;
+    margin-left: 1rem;
+  }
+
+  h2 {
+    margin-right: 20rem;
+  }
+
+  .deconnection {
+    margin-right: 2rem;
+  }
+}

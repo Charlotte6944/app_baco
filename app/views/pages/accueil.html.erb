@@ -1,15 +1,7 @@
-<%= render(HeaderAdminComponent.new(titre: "admin")) %>
-
-<h1>Hello</h1>
-
 <% if current_utilisateur.admin? %>
-  <h2>Vous êtes connecté</h2>
+  <%= render(HeaderAdminComponent.new(titre: "Plateforme d'administration du Badminton Club d'Oullins")) %>
 <% end %>
 
 <% unless current_utilisateur.admin? %>
   <h2>Vous ne pouvez pas accéder à cette page.</h2>
-<% end %>
-
-<% if utilisateur_signed_in?%>
-  <%= link_to "Déconnexion",  destroy_utilisateur_session_path, :method => :delete, :class => 'button'  %>
 <% end %>

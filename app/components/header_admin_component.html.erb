@@ -1,2 +1,7 @@
-<h2><%= @titre %></h2>
-<%= image_tag("logo-baco.jpeg", :alt => "logo baco", :id => "logo_baco") %>
+<div id="header">
+  <%= image_tag("logo-baco.jpeg", :alt => "logo baco", :id => "logo_baco") %>
+  <h2><%= @titre %></h2>
+  <div class="deconnection">
+    <%= link_to "Déconnection",  destroy_utilisateur_session_path, :method => :delete, :class => 'bouton bouton_premier'  %>
+  </div>
+</div>
