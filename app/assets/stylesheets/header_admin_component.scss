@@ -1,21 +1,30 @@
 @import "../stylesheets/config/variables.scss";
 
 #header {
-  height: 3.5rem;
+  height: 5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  img {
-    height: 3rem;
-    margin-left: 1rem;
+  .container_header {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+
+    h2 {
+    }
+
+    .deconnexion {
+      margin-right: 2rem;
+    }
   }
 
-  h2 {
-    margin-right: 20rem;
-  }
+  .image {
+    width: 10%;
+    height: inherit;
 
-  .deconnexion {
-    margin-right: 2rem;
+    img {
+      height: inherit;
+    }
   }
 }
