@@ -1,7 +1,3 @@
-<% if current_utilisateur.admin? %>
-  <%= render(HeaderAdminComponent.new(titre: "Plateforme d'administration du Badminton Club d'Oullins")) %>
-<% end %>
-
 <% unless current_utilisateur.admin? %>
   <h2>Vous ne pouvez pas accéder à cette page.</h2>
 <% end %>

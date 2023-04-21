@@ -9,11 +9,16 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 
-    <%= stylesheet_link_tag "pages" %>
-    <%= stylesheet_link_tag "header_admin_component" %>
+    <%= stylesheet_link_tag "application" %>
+    <%= stylesheet_link_tag "navbar_component"%>
+
   </head>
 
   <body>
+    <% if current_utilisateur.present? && current_utilisateur.admin? %>
+      <%= render(HeaderAdminComponent.new(titre: "Plateforme d'administration du Badminton Club d'Oullins")) %>
+      <%= render(NavbarComponent.new) %>
+    <% end %>
     <%= yield %>
   </body>
 </html>

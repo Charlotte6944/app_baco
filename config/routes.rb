@@ -3,6 +3,6 @@ Rails.application.routes.draw do
   devise_for :utilisateurs
   resources :utilisateurs, only: [:new, :create, :show]
 
-  root to: 'pages#accueil'
+  root to: 'pages#accueil', as: :accueil
 
 end

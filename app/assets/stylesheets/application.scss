@@ -1,5 +1,12 @@
 @import "../stylesheets/config/variables.scss";
 
+// Pages
+@import "../stylesheets/pages.scss";
+
+// Components
+@import "../stylesheets/components/header_admin_component.scss";
+// @import "../stylesheets/components/navbar_component.scss";
+
 body {
   margin: 0;
   padding: 0;
