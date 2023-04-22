@@ -5,7 +5,7 @@
 
 // Components
 @import "../stylesheets/components/header_admin_component.scss";
-// @import "../stylesheets/components/navbar_component.scss";
+@import "../stylesheets/components/navbar_component.scss";
 
 body {
   margin: 0;
@@ -47,5 +47,7 @@ body {
   h1, h2, h3, h4, h5, h6 {
     margin: 0;
     padding: 0;
+    color: $color_black;
+    font-weight: bold;
   }
 }

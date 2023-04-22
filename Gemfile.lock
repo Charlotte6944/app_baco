@@ -251,6 +251,8 @@ GEM
       sprockets (>= 3.0.0)
     sys-uname (1.2.2)
       ffi (~> 1.1)
+    tailwindcss-rails (2.0.28-arm64-darwin)
+      railties (>= 6.0.0)
     thor (1.2.1)
     tilt (2.0.11)
     turbolinks (5.2.1)
@@ -307,6 +309,7 @@ DEPENDENCIES
   selenium-webdriver (>= 4.0.0.rc1)
   simple_form
   spring
+  tailwindcss-rails (~> 2.0)
   turbolinks (~> 5)
   tzinfo-data
   view_component
