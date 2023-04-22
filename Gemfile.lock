@@ -189,6 +189,11 @@ GEM
       nokogiri (>= 1.6)
     rails-html-sanitizer (1.4.3)
       loofah (~> 2.3)
+    rails_live_reload (0.3.3)
+      listen
+      nio4r
+      railties
+      websocket-driver
     railties (6.1.7)
       actionpack (= 6.1.7)
       activesupport (= 6.1.7)
@@ -222,8 +227,6 @@ GEM
       rspec-support (~> 3.11)
     rspec-support (3.11.1)
     rubyzip (2.3.2)
-    sass-rails (6.0.0)
-      sassc-rails (~> 2.1, >= 2.1.1)
     sassc (2.4.0)
       ffi (~> 1.9)
     sassc-rails (2.1.2)
@@ -304,8 +307,9 @@ DEPENDENCIES
   pg (~> 1.1)
   puma (~> 5.0)
   rails (~> 6.1.7)
+  rails_live_reload
   rspec-rails (~> 6.0.0)
-  sass-rails (>= 6)
+  sassc-rails
   selenium-webdriver (>= 4.0.0.rc1)
   simple_form
   spring
