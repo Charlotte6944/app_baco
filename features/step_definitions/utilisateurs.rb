@@ -1,13 +1,15 @@
 Given('utilisateur se connectant') do |table|
+  @utilisateurs = []
   table.hashes.each do |hash|
     @utilisateur = Utilisateur.create!(hash)
+    @utilisateurs << @utilisateur
   end
 end
 
 When('je suis sur la page accueil') do
-  pending # Write code here that turns the phrase above into concrete actions
+  visit root_path
 end
 
 Then('je vois le tableau de tous les utilisateurs') do
-  pending # Write code here that turns the phrase above into concrete actions
+  expect(page).to have_content(@utilisateurs)
 end
