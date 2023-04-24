@@ -13,6 +13,14 @@ module.exports = {
         sans: ['Graphik', 'sans-serif'],
         serif: ['Merriweather', 'serif']
       },
+      colors: {
+        'black': '#0c1115',
+        'gray_dark': '#6a6b6c',
+        'blue': '#01509f',
+        'yellow': '#ffe530',
+        'saumon': '#ffd09e',
+        'gray_light': '#f8fcff',
+      }
     }
   }
 };
