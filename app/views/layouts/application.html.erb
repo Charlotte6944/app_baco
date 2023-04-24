@@ -12,10 +12,16 @@
   </head>
 
   <body>
+  <div class="max-h-full">
     <% if current_utilisateur.present? && current_utilisateur.admin? %>
       <%= render(HeaderAdminComponent.new(titre: "Plateforme d'administration du Badminton Club d'Oullins")) %>
-      <%= render(NavbarComponent.new) %>
+      <div class="bg-blue absolute z-1 w-40 max-h-full pt-3 pb-3">
+        <%= render(NavbarComponent.new) %>
+      </div>
     <% end %>
-    <%= yield %>
+    <div class="pl-40 pr-10">
+      <%= yield %>
+    </div>
+  </div>
   </body>
 </html>
