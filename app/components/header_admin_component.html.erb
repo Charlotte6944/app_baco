@@ -5,7 +5,7 @@
   <div class="container_header">
     <h2><%= @titre %></h2>
     <div class="deconnexion">
-      <%= link_to "Déconnexion",  destroy_utilisateur_session_path, :method => :delete, :class => 'bouton bouton_premier'  %>
+      <%= link_to "Déconnexion",  destroy_utilisateur_session_path, method: :destroy, :class => 'bouton bouton_premier'  %>
     </div>
   </div>
 </div>

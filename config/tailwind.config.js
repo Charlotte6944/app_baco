@@ -20,6 +20,7 @@ module.exports = {
         'yellow': '#ffe530',
         'saumon': '#ffd09e',
         'gray_light': '#f8fcff',
+        'red': '#b91c1c'
       }
     }
   }
