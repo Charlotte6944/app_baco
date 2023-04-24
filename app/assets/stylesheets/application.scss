@@ -5,7 +5,6 @@
 
 // Components
 @import "../stylesheets/components/_header_admin_component.scss";
-@import "../stylesheets/components/_navbar_component.scss";
 
 body {
   margin: 0;
@@ -23,7 +22,6 @@ body {
 
   .bouton {
     padding: 0.5rem 1rem;
-    border-radius: $border_radius;
     cursor: pointer;
   }
 
