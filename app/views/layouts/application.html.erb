@@ -14,7 +14,7 @@
   <body>
     <div class="max-h-full">
       <% if current_utilisateur.present? && current_utilisateur.admin? %>
-        <div class="bg-blue absolute z-1 w-40 max-h-full pt-3 pb-3 mt-20">
+        <div class="bg-blue absolute z-1 w-8 max-h-full pt-3 pb-3 mt-20">
           <%= render(NavbarComponent.new) %>
         </div>
       <% end %>
