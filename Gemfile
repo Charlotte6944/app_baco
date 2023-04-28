@@ -29,6 +29,8 @@ gem 'jquery-rails'
 
 gem 'simple_form'
 
+gem 'will_paginate', '~> 3.3'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 

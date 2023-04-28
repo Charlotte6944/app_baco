@@ -3,7 +3,9 @@ class PagesController < ApplicationController
   before_action :verify_admin
 
   def accueil
-    @utilisateurs = Utilisateur.all
+    @utilisateurs = Utilisateur.paginate(
+      page: params[:page],
+      per_page: 10)
     @nombre_membres = @utilisateurs.count
   end
 

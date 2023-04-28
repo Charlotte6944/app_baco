@@ -13,7 +13,7 @@
   </head>
 
   <body>
-    <div class="max-h-full">
+    <div class="max-h-full bg-gray_light">
       <% if current_utilisateur.present? && current_utilisateur.admin? %>
         <div class="bg-blue absolute z-1 w-8 max-h-full pt-3 pb-3 mt-20">
           <%= render(NavbarComponent.new) %>

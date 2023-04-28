@@ -1,0 +1,5 @@
+fr:
+  views:
+    pagination:
+      previous: "&laquo; Premier"
+      next: "Dernier &raquo;"
