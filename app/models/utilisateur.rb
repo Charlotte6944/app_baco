@@ -4,6 +4,8 @@ class Utilisateur < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  default_scope { order(nom_usage: :asc) }
+
   def admin?
     role == "admin"
   end

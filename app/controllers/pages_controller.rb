@@ -1,12 +1,14 @@
 class PagesController < ApplicationController
 
-  before_action :verify_admin
+  before_action :verify_admin, only: [:accueil]
 
   def accueil
     @utilisateurs = Utilisateur.paginate(
       page: params[:page],
-      per_page: 10)
+      per_page: 15)
     @nombre_membres = @utilisateurs.count
+    @colonnes = Utilisateur.columns.map(&:name)
+
   end
 
   private
