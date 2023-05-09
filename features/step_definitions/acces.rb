@@ -1,6 +1,7 @@
 Given('les utilisateurs suivants existent:') do |table|
-  table.hashes.each do |hash|
-    @utilisateur = Utilisateur.create!(hash)
+  @utilisateurs = []
+  table.hashes.each do |utilisateur|
+    @utilisateurs << Utilisateur.create!(utilisateur)
   end
 end
 
@@ -8,9 +9,22 @@ Given('Je suis sur la page de connexion') do
   visit new_utilisateur_session_path
 end
 
-When('Je remplis le formulaire avec des données valides') do
-  fill_in 'email', :with => @utilisateur.email
-  fill_in 'password', :with => @utilisateur.password
+When('Je remplis le formulaire avec des données valides admin') do
+  @utilisateurs.each do |utilisateur|
+    if utilisateur.role == 'admin'
+      fill_in 'email', :with => utilisateur.email
+      fill_in 'password', :with => utilisateur.password
+    end
+  end
+end
+
+When('Je remplis le formulaire avec des données valides joueur') do
+  @utilisateurs.each do |utilisateur|
+    if utilisateur.role == 'joueur'
+      fill_in 'email', :with => utilisateur.email
+      fill_in 'password', :with => utilisateur.password
+    end
+  end
 end
 
 When('Je clique sur le bouton {string}') do |string|

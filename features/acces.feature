@@ -10,13 +10,13 @@ Feature: Accès à la plateforme
 
   Scenario: Se connecté en tant qu'administrateur
   Given Je suis sur la page de connexion
-  When Je remplis le formulaire avec des données valides
+  When Je remplis le formulaire avec des données valides admin
   And Je clique sur le bouton "Connexion"
   Then je suis dirigé vers la page d accueil
 
   Scenario: Se connecté en tant que joueur
   Given Je suis sur la page de connexion
-  When Je remplis le formulaire avec des données valides
+  When Je remplis le formulaire avec des données valides joueur
   And Je clique sur le bouton "Connexion"
   Then je vois un message d erreur "Vous n'avez pas les droits d'administrateur."
 
