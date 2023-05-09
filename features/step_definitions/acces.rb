@@ -23,7 +23,7 @@ When('Je remplis le formulaire avec des données non valides') do
 end
 
 Then('je suis dirigé vers la page d accueil') do
-  expect(current_path).to eq(root_path)
+  expect(page).to have_current_path(accueil_path)
 end
 
 Then('je vois un message d erreur') do
@@ -31,5 +31,6 @@ Then('je vois un message d erreur') do
 end
 
 Then('je vois un message d erreur {string}') do |string|
+  expect(page).to have_current_path(new_utilisateur_session_path)
   expect(page).to have_content(string)
 end

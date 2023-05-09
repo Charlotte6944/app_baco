@@ -18,7 +18,7 @@ Feature: Accès à la plateforme
   Given Je suis sur la page de connexion
   When Je remplis le formulaire avec des données valides
   And Je clique sur le bouton "Connexion"
-  Then je vois un message d erreur 'Vous ne pouvez pas accéder à cette page.'
+  Then je vois un message d erreur "Vous n'avez pas les droits d'administrateur."
 
   Scenario: Erreur de connexion
   Given Je suis sur la page de connexion
