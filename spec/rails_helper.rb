@@ -1,3 +1,8 @@
+# Add these after require 'rspec/rails'
+require 'devise'
+require_relative 'support/controller_macros'
+
+
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 require 'spec_helper'
 ENV['RAILS_ENV'] ||= 'test'
@@ -23,7 +28,7 @@ require "capybara/rspec"
 # directory. Alternatively, in the individual `*_spec.rb` files, manually
 # require only the support files necessary.
 #
-# Dir[Rails.root.join('spec', 'support', '**', '*.rb')].sort.each { |f| require f }
+Dir[Rails.root.join('spec', 'factories', '**', '*.rb')].sort.each { |f| require f }
 
 # Checks for pending migrations and applies them before tests are run.
 # If you are not using ActiveRecord, you can remove these lines.
@@ -67,4 +72,8 @@ RSpec.configure do |config|
   config.include ViewComponent::TestHelpers, type: :component
   config.include Capybara::RSpecMatchers, type: :component
   config.include Capybara::RSpecMatchers, type: :component
+
+  config.include Devise::Test::ControllerHelpers, :type => :controller
+  config.include FactoryBot::Syntax::Methods
+  config.extend ControllerMacros, :type => :controller
 end
