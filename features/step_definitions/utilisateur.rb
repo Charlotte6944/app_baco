@@ -22,18 +22,11 @@ end
 Then('Je vois la liste des utilisateurs') do
   expect(page).to have_content("Liste des membres")
   @utilisateurs.each do |utilisateur|
-    expect(page).to have_content(utilisateur.email)
     expect(page).to have_content(utilisateur.role)
     expect(page).to have_content(utilisateur.nom_usage)
     expect(page).to have_content(utilisateur.prenom)
-    expect(page).to have_content(utilisateur.date_naissance)
+    expect(page).to have_content(utilisateur.sexe)
     expect(page).to have_content(utilisateur.num_licence)
     expect(page).to have_content(utilisateur.actif)
-    expect(page).to have_content(utilisateur.adresse_contact)
-    expect(page).to have_content(utilisateur.code_postal)
-    expect(page).to have_content(utilisateur.ville)
-    expect(page).to have_content(utilisateur.pays)
-    expect(page).to have_content(utilisateur.tel_contact)
-    expect(page).to have_content(utilisateur.sexe)
   end
 end

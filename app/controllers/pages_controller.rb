@@ -3,10 +3,18 @@ class PagesController < ApplicationController
   before_action :verify_admin, only: [:accueil]
 
   def accueil
-    @utilisateurs = Utilisateur.paginate(
-      page: params[:page],
-      per_page: 15)
-    @colonnes = Utilisateur.column_names
+    @utilisateurs = Utilisateur.select(
+        [:actif,
+          :role,
+          :num_licence,
+          :nom_usage,
+          :prenom,
+          :sexe,])
+      .order(:nom_usage)
+      .paginate(
+        page: params[:page],
+        per_page: 15)
+    @colonnes = ['nom_usage', 'prenom', 'sexe', 'actif', 'role', 'num_licence']
     @nombre_membres = Utilisateur.all.count
   end
 
