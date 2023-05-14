@@ -6,9 +6,8 @@ class PagesController < ApplicationController
     @utilisateurs = Utilisateur.paginate(
       page: params[:page],
       per_page: 15)
-    @nombre_membres = @utilisateurs.count
-    @colonnes = Utilisateur.columns.map(&:name)
-
+    @colonnes = Utilisateur.column_names
+    @nombre_membres = Utilisateur.all.count
   end
 
   private
